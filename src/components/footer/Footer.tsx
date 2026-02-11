@@ -1,31 +1,23 @@
-function Home() {
+import { FacebookLogo, InstagramLogo, LinkedinLogo } from "@phosphor-icons/react"
+
+function Footer() {
+
+    // Pega o ano atual automaticamente
+    // eslint-disable-next-line prefer-const
+    let data = new Date().getFullYear()
+
     return (
         <>
-            <div className="bg-indigo-900 flex justify-center">
-                <div className='container grid grid-cols-2 text-white'>
-                    <div className="flex flex-col gap-4 items-center justify-center py-4">
-                        <h2 className='text-5xl font-bold'>
-                            Seja Bem Vinde!
-                        </h2>
-                        <p className='text-xl'>
-                            Expresse aqui seus pensamentos e opniões
-                        </p>
-
-                        <div className="flex justify-around gap-4">
-                            <div className='rounded text-white 
-                                            border-white border-solid border-2 py-2 px-4'
-                            >
-                                Nova Postagem
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className="flex justify-center ">
-                        <img 
-                            src="https://i.imgur.com/fyfri1v.png" 
-                            alt="Imagem Página Home" 
-                            className='w-2/3'
-                        />
+            <div className="flex justify-center bg-indigo-900 text-white">
+                <div className="container flex flex-col items-center py-4">
+                    <p className='text-xl font-bold'>
+                        Blog Pessoal Generation | Copyright: {data}
+                    </p>
+                    <p className='text-lg'>Acesse nossas redes sociais</p>
+                    <div className='flex gap-2'>
+                        <LinkedinLogo size={48} weight='bold' />
+                        <InstagramLogo size={48} weight='bold' />
+                        <FacebookLogo size={48} weight='bold' />
                     </div>
                 </div>
             </div>
@@ -33,4 +25,4 @@ function Home() {
     )
 }
 
-export default Home
+export default Footer
