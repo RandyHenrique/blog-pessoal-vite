@@ -1,3 +1,5 @@
+/* eslint-disable react-hooks/exhaustive-deps */
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { useState, useContext, useEffect, type ChangeEvent, type FormEvent } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { ClipLoader } from "react-spinners";
@@ -191,16 +193,14 @@ const carregandoTema = tema.descricao === '';
                     type='submit'
                     className='rounded disabled:bg-slate-200 bg-indigo-400 hover:bg-indigo-800
                                text-white font-bold w-1/2 mx-auto py-2 flex justify-center'
-                               disabled={carregandoTema}
-                               
-                               { isLoading ?
+                               disabled={carregandoTema}    >
+                                { isLoading ?
                                 <ClipLoader 
                                 color="#ffffff" 
                                 size={24}
                                  />:
                                  <span>{id !== undefined ? 'Atualizar' : 'Cadastrar'}</span>
                                 }
-                    >
                     
                 </button>
             </form>
